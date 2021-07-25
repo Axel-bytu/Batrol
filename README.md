@@ -4,7 +4,7 @@
 <a href="#"><img title="BATROL" src="https://img.shields.io/badge/Batrol-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://github.com/farhan-dqz"><img title="Author" src="https://img.shields.io/badge/Author-Axelbytu/Alien2?color=red&style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/Axel-bytu"><img title="Author" src="https://img.shields.io/badge/Author-Axelbytu/Alien2?color=red&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
@@ -21,10 +21,10 @@ Project created by <a href="https://github.com/farhan-dqz">SafwanGanz</a> to mak
   <a href="httsp://github.com/farhan-dqz/JulieMwol">
     <img src="https://img.shields.io/github/repo-size/SafwanGanz/Alien-Alfa2?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
-<a href="https://github.com/SafwanGanz/followers"><img title="Followers" src="https://img.shields.io/github/followers/SafwanGanz?color=blue&style=flat-square"></a>
-<a href="https://github.com/SafwanGanz//stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/SafwanGanz/Alien-Alfa2?color=blue&style=flat-square"></a>
-<a href="https://github.com/SafwanGanz/Alien-Alfa2/network/members"><img title="Forks" src="https://img.shields.io/github/forks/fSafwanGanz/Alien-Alfa2?color=blue&style=flat-square"></a>
-<a href="https://github.com/SafwanGanz/Alien-Alfa2/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/SafwanGanz/Alien-Alfa2?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Axel-bytu/followers"><img title="Followers" src="https://img.shields.io/github/followers/Axel-bytu?color=blue&style=flat-square"></a>
+<a href="https://github.com/Axel-bytu//stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Axel-bytu/Batrol?color=blue&style=flat-square"></a>
+<a href="https://github.com/Axel-bytu/Batrol/network/members"><img title="Forks" src="https://img.shields.io/github/forks/fAxel-bytu/Batrol?color=blue&style=flat-square"></a>
+<a href="https://github.com/Axel-bytu/Batrol/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Axel-bytu/Batrol?label=Watchers&color=blue&style=flat-square"></a>
 <a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
 </p>
 
