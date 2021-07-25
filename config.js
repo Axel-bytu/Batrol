@@ -1,4 +1,4 @@
-global.owner = ['919567997462', '919383400679'] // Put your number here
+global.owner = ['919567997462', '593998840594'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -18,8 +18,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Toxic-Bot'
-global.author = 'Safwan/Toxic'
+global.packname = 'Batrol'
+global.author = 'Axel/Toxic'
 
 global.multiplier = 69 // The higher, The harder levelup
 
