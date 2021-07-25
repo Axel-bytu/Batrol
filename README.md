@@ -1,10 +1,10 @@
 <div align="center">
   <img border-radius: 15px src="https://avatars.githubusercontent.com/u/67726326?v=4" width="300" height="300"/>
   <p align="center">
-<a href="#"><img title="TOXIC-ALIEN" src="https://img.shields.io/badge/ToxicAlien-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="BATROL" src="https://img.shields.io/badge/Batrol-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://github.com/farhan-dqz"><img title="Author" src="https://img.shields.io/badge/Author-SafwanGanz/Alien-Alfa2?color=red&style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/farhan-dqz"><img title="Author" src="https://img.shields.io/badge/Author-Axelbytu/Alien2?color=red&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
@@ -45,8 +45,8 @@ apt install git -y
 apt install nodejs -y
 apt install ffmpeg -y
 apt install imagemagick -y
-git clone https://github.com/SafwanGanz/Aien-Alfa2
-cd Alien-Alfa2
+git clone https://github.com/Axel-bytu/Batrol
+cd Batrol
 npm install
 ```
 
@@ -60,8 +60,8 @@ npm install
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/SafwanGanz/Aien-Alfa2
-cd Alien-Alfa2
+git clone https://github.com/Axel-bytu/Batrol
+cd Batrol
 npm install
 ```
 
@@ -128,5 +128,6 @@ conn.logger.level = 'debug'
 
 #### Powered By : [`XTEAM`](https://api.xteam.xyz)
 
-#### Author / Creator : [`SafwanGanz`](https://github.com/SafwanGanz)
+#### Author / Base : [`SafwanGanz`](https://github.com/SafwanGanz)
 
+#### Author / creador : [`Axel-bytu`](https://github.com/Axel-bytu)
