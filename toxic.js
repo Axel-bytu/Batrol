@@ -4,7 +4,7 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('TOXIC ALIEN\n WHATSAPP BOT\nby toxic Safwan|toxicAlien\nv 2.0.0', {
+CFonts.say('TOXIC BATROL\n WHATSAPP BOT\nby toxic Axel|toxicBatrol\nv 2.0.0', {
   font: 'shade',
   align: 'center',
   gradient: ['red', 'magenta']
