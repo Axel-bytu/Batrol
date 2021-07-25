@@ -32,11 +32,12 @@ Project created by <a href="https://github.com/farhan-dqz">SafwanGanz</a> to mak
 Click WA logo to Join Support Group 👇
     <br>
 <br>
-  [![join](https://github.com/Alien-alfa2/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/BT0nNPBthyFI1ejoSr0i7W)
+  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/FL5A6xvxSE9IzVTqYANXj8)
   <div align="center">
        
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=SafwanGanz&repo=Alien-Alfa2t&theme=nightowl)](https://github.com/SafwanGanz/Alien-Alfa2)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=farhan-dqz&repo=PublicBot&theme=nightowl)](https://github.com/farhan-dqz/PublicBot)
   </div>
+
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash
