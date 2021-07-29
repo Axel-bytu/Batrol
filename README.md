@@ -1,10 +1,10 @@
 <div align="center">
-  <img border-radius: 15px src="https://avatars.githubusercontent.com/u/67726326?v=4" width="300" height="300"/>
+  <img border-radius: 15px src="https://raw.githubusercontent.com/Axel-bytu/Batrol/main/tmp/IMG-20210524-WA0267.jpg" width="300" height="300"/>
   <p align="center">
 <a href="#"><img title="BATROL" src="https://img.shields.io/badge/Batrol-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://github.com/Axel-bytu"><img title="Author" src="https://img.shields.io/badge/Author-Axelbytu/Alien2?color=red&style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/Axel-bytu"><img title="Author" src="https://img.shields.io/badge/Author-Axelbytu?color=red&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
@@ -19,7 +19,7 @@ Project created by <a href="https://github.com/farhan-dqz">Axel-bytu</a> to make
 
   <p align="center">
   <a href="httsp://github.com/farhan-dqz/JulieMwol">
-    <img src="https://img.shields.io/github/repo-size/SafwanGanz/Alien-Alfa2?color=green&label=Repo%20total%20size&style=plastic">
+    <img src="https://img.shields.io/github/repo-size/Axel-bytu/Batrl?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
 <a href="https://github.com/Axel-bytu/followers"><img title="Followers" src="https://img.shields.io/github/followers/Axel-bytu?color=blue&style=flat-square"></a>
 <a href="https://github.com/Axel-bytu//stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Axel-bytu/Batrol?color=blue&style=flat-square"></a>
