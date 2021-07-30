@@ -19,11 +19,11 @@ Project created by <a href="https://github.com/farhan-dqz">Axel-bytu</a> to make
 
   <p align="center">
   <a href="httsp://github.com/farhan-dqz/JulieMwol">
-    <img src="https://img.shields.io/github/repo-size/Axel-bytu/Batrl?color=green&label=Repo%20total%20size&style=plastic">
+    <img src="https://img.shields.io/github/repo-size/Axel-bytu/Batrol?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
 <a href="https://github.com/Axel-bytu/followers"><img title="Followers" src="https://img.shields.io/github/followers/Axel-bytu?color=blue&style=flat-square"></a>
 <a href="https://github.com/Axel-bytu//stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Axel-bytu/Batrol?color=blue&style=flat-square"></a>
-<a href="https://github.com/Axel-bytu/Batrol/network/members"><img title="Forks" src="https://img.shields.io/github/forks/fAxel-bytu/Batrol?color=blue&style=flat-square"></a>
+<a href="https://github.com/Axel-bytu/Batrol/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Axel-bytu/Batrol?color=blue&style=flat-square"></a>
 <a href="https://github.com/Axel-bytu/Batrol/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Axel-bytu/Batrol?label=Watchers&color=blue&style=flat-square"></a>
 <a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
 </p>
