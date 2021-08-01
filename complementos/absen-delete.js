@@ -3,7 +3,7 @@ let handler = async(m, { usedPrefix }) => {
      conn.absent = conn.absent ? conn.absent : {}
      if (!(id in conn.absen)) throw `_*No absences took place in this group!*_\n\n*${usedPrefix}start absent* - to start absent`
      delete conn.absen[id]
-     m.reply(`Done!`)
+     m.reply(`¡listo!`)
 }
 handler.help = ['remove absent']
 handler.tags = ['absent']
