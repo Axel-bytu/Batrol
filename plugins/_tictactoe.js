@@ -18,16 +18,16 @@ handler.before = function (m) {
         if (m.sender !== room.game.currentTurn) { // nek wayahku
             if (!isSurrender) return !0
         }
-        if (debugMode) m.reply('[DEBUG]\n' + require('util').format({
+        if (debugMode) m.reply('[DEPURAR]\n' + require('util').format({
             isSurrender,
             text: m.text
         }))
         if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
             m.reply({
-                '-3': 'ɢᴀᴍᴇ ʜᴀs ᴇɴᴅᴇᴅ',
-                '-2': 'ɪɴᴠᴀʟɪᴅ',
-                '-1': 'ᴘᴏsɪᴛɪᴏɴ ɪɴᴠᴀʟɪᴅ',
-                0: 'ᴘᴏsɪᴛɪᴏɴ ɪɴᴠᴀʟɪᴅ',
+                '-3': 'El juego ha terminado',
+                '-2': 'No válido',
+                '-1': 'Posición no válida',
+                0: 'Posición no válida',
             }[ok])
             return !0
         }
@@ -57,14 +57,14 @@ handler.before = function (m) {
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
-${isWin ? `@${winner.split('@')[0]} ᴡɪɴ! (+${winScore} XP)` : isTie ? `ɢᴀᴍᴇ ᴏᴠᴇʀ (+${playScore} XP)` : `ᴛᴜʀɴ ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `@${winner.split('@')[0]} Menang! (+${winScore} XP)` : isTie ? `Game berakhir (+${playScore} XP)` : `Giliran ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
-ᴛʏᴘᴇ *ɢɪᴠᴇ ᴜᴘ* ɢɪᴠᴇ ᴜᴘ
+Ketik *nyerah* untuk nyerah
 Room ID: ${room.id}
 `.trim()
-        let users = global.DATABASE._data.users
+        let users = global.db.data.users
         if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
             room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
         if (room.x !== room.o) m.reply(str, room.x, {
@@ -81,7 +81,7 @@ Room ID: ${room.id}
             users[room.game.playerX].exp += playScore
             users[room.game.playerO].exp += playScore
             if (isWin) users[winner].exp += winScore - playScore
-            if (debugMode) m.reply('[DEBUG]\n' + require('util').format(room))
+            if (debugMode) m.reply('[DEPURAR]\n' + require('util').format(room))
             delete this.game[room.id]
         }
     }
