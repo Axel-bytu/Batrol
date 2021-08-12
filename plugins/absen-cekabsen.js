@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-   if (!(id in conn.absen)) throw `_*No absences took place in this group!*_\n\n*${usedPrefix}mulaiabsen absent* - to start absent`
+   if (!(id in conn.absen)) throw `_*¡No hubo ausencias en este grupo!*_\n\n*${usedPrefix}mulaiabsen absent* - to start absent`
 
      let d = new Date
      let date = d.toLocaleDateString('id', {
@@ -11,12 +11,12 @@ let handler = async (m, { conn, usedPrefix }) => {
      })
      let absent = conn.absen[id][1]
      let list = absent.map((v, i) => `│ ${i + 1}. @${v.split`@`[0]}`).join('\n')
-     conn.reply(m.chat, `*「 ABSENT *
+     conn.reply(m.chat, `*「 AUSENTE *
 
-Date: ${date}
+Fecha: ${date}
 ${conn.absent[id][2]}
 
-*Those who have been absent:*
+*Los que han estado ausentes:*
 │
 Total: ${absent.length}
 ${list}
