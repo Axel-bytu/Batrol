@@ -1,24 +1,25 @@
 let handler = m => m
 handler.before = m => {
-  let user = global.DATABASE.data.users[m.sender]
+  let user = global.db.data.users[m.sender]
   if (user.afk > -1) {
     m.reply(`
-ʏᴏᴜ ǫᴜɪᴛ ᴀғᴋ ${user.afkReason ? ' after ' + user.afkReason : ''}
-During ${clockString(new Date - user.afk)}
+Dejaste AFK${user.afkReason ? ' después ' + user.afkReason : ''}
+Durante ${clockString(new Date - user.afk)}
 `.trim())
     user.afk = -1
     user.afkReason = ''
   }
   let jids = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
   for (let jid of jids) {
-    let user = global.DATABASE.data.users[jid]
+    let user = global.db.data.users[jid]
     if (!user) continue
     let afkTime = user.afk
     if (!afkTime || afkTime < 0) continue
     let reason = user.afkReason || ''
     m.reply(`
-ᴅᴏɴ'ᴛ ᴛᴀɢ ʜɪᴍ ʜᴇ's ɪɴ ᴀғᴋ ${reason ? 'with reason ' + reason : 'no reason'}
-During ${clockString(new Date - afkTime)}
+¡No lo etiquetes!
+El esta en AFK ${reason ? 'con razón ' + reason : 'Sin razón'}
+Durante ${clockString(new Date - afkTime)}
 `.trim())
   }
   return true
