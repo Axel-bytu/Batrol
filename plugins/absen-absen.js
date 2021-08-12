@@ -1,33 +1,33 @@
 let handler = async (m, { usedPrefix }) => {
     let id = m.chat
     conn.absen = conn.absen ? conn.absen : {}
-    if (!(id in conn.absen)) throw `_*No absences take place in this group!*_\n\n*${usedPrefix}mulaiabsen* - to start absent`
+    if (!(id in conn.absen)) throw`_ *¡No hubo ausencias en este grupo!* _\n\n * ${usedPrefix} comenzar ausente* - comenzar ausente`
 
     let absen = conn.absen[id][1]
     const wasVote = absen.includes(m.sender)
-    if (wasVote) throw `*You're absent!*`
+    if (wasVote) throw '*¡Estás ausente!*'
     absen.push(m.sender)
-    m.reply(`Done!`)
+    m.reply(`¡Lísto!`)
     let d = new Date
-    let date = d.toLocaleDateString('en', {
+    let date = d.toLocaleDateString('id', {
         day: 'numeric',
         month: 'long',
         year: 'numeric'
     })
     let list = absen.map((v, i) => `│ ${i + 1}. @${v.split`@`[0]}`).join('\n')
-    conn.reply(m.chat, `*「 ABSEN 」*
+    conn.reply(m.chat, `*「 AUSENTE 」*
 
-Date: ${date}
-${conn.absent[id][2]}
+Fecha: ${date}
+${conn.absen[id][2]}
 
-*Those who have been absent:*
-│
-Total: ${absent.length}
+┌ *Los que han estado ausentes:*
+│ 
+│ Total: ${absen.length}
 ${list}
 │ 
 └────
 
-_by Dragon Loop_`, m, { contextInfo: { mentionedJid: absen } })
+_by Dragon loop__`, m, { contextInfo: { mentionedJid: absen } })
 }
 handler.help = ['absen']
 handler.tags = ['absen']
