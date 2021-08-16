@@ -1,6 +1,6 @@
 let handler = async (m, { conn, isAdmin }) => {
   if (m.fromMe) throw 'nope'
-   if (isAdmin) throw `Even though you're already an admin`
+  if (isAdmin) throw 'Aunque ya soy administrador'
   await conn.groupMakeAdmin(m.chat, [m.sender])
 }
 handler.command = /^admin.$/i
