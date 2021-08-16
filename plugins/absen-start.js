@@ -1,18 +1,18 @@
-let handler = async(m, { usedPrefix, text }) => {
-     conn.absent = conn.absent ? conn.absent : {}
-     let id = m.chat
-     if (id in conn.absen) {
-         throw `_*There are still absences in this chat!*_\n\n*${usedPrefix}remove absent* - to delete absences`
-     }
-     conn.absent[id] = [
-         m.reply(`Successfully starting timesheet!\n\n*${usedPrefix}absent* - for absent\n*${usedPrefix}checkable* - to check attendance\n*${usedPrefix}remove absent* - to delete attendance data `),
-         [],
-         text
-     ]
+let handler = async (m, { usedPrefix, text }) => {
+    conn.absen = conn.absen ? conn.absen : {}
+    let id = m.chat
+    if (id in conn.absen) {
+        throw `_ *¡Todavía hay ausencias en este chat!* _\n\n *${usedPrefix}hapusabsen* -para eliminar las ausencias`
+    }
+    conn.absen[id] = [
+        m.reply(`¡Comienzo exitoso ausente!\n\n*${usedPrefix}absen* - estar ausente\n*${usedPrefix}cekabsen* - para comprobar la asistencia\n*${usedPrefix}hapusabsen* - para borrar los datos de asistencia`),
+        [],
+        text
+    ]
 }
-handler.help = ['startabsen [text]']
-handler.tags = ['absent']
-handler.command = /^(start|start)absent$/i
+handler.help = ['mulaiabsen [teks]']
+handler.tags = ['absen']
+handler.command = /^(start|mulai)absen$/i
 handler.group = true
 handler.admin = true
 module.exports = handler
