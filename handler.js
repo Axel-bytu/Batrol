@@ -381,15 +381,15 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-   rowner: 'This command can only be used by _*OWWNER!1!1!*_',
-     owner: 'This command can only be used by _*Owner Bot*_!',
-     mods: 'This command can only be used by _*Moderator*_ !',
-     premium: 'This order is only for _*Premium*_ members!',
-     group: 'This command can only be used in groups!',
-     private: 'This command can only be used in Private Chat!',
-     admin: 'This command is for *Admin* group only!',
-     botAdmin: 'Make bot as *Admin* to use this command!',
-     unreg: 'Please register to use this feature by typing:\n\n*#register name.age list*\n\nExample: *#register toxic. 21*'
+   rowner: 'Este comando solo puede ser utilizado por _ *OWWNER!1!1!* _',
+     owner: '¡Este comando solo puede ser usado por _ *Owner Bot* _!',
+     mods: 'Este comando solo puede ser usado por _ *Moderador* _!',
+     premium: '¡Este pedido es solo para miembros _ *Premium* _!',
+     group: '¡Este comando solo se puede usar en grupos!',
+     privado: '¡Este comando solo se puede usar en el chat privado!',
+     admin: '¡Este comando es solo para el grupo * Admin *!',
+     botAdmin: '¡Hacer bot como *Admin* para usar este comando!',
+     unreg: 'Por favor regístrese para usar esta función escribiendo:\n\n*#nombre de registro. lista de edad *\n\nEjemplo: *#registro tóxico.21*'
   }[type]
   if (msg) return m.reply(msg)
 }
