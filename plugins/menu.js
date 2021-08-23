@@ -50,9 +50,9 @@ const defaultMenu = {
 ╰══════════════════⊷❍➣
 
 %readmore`.trimStart(),
-  header: '╭════〘 *%category* 〙════⊷❍➣━\n┃%emos',
+  header: '╭════〘 *%category* 〙════⊷❍➣',
   body: '```┃%emos %cmd %islimit %isPremium```',
-  footer: '┃%emos\n╰══════════════════⊷❍➣',
+  footer: '╰══════════════════⊷❍➣',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
