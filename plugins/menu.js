@@ -29,30 +29,30 @@ let tags = {
 const defaultMenu = {
   before: `
   
-╭════〘 *_%me_* 〙════⊷❍
-┃%emos╭─────────────────
-┃%emos│
-┃%emos│ *ᴜsᴇʀ* : \`\`\`%name\`\`\`
-┃%emos│ *ʀᴏʟᴇ* : \`\`\`%role\`\`\`
-┃%emos│ *ʟᴇᴠᴇʟ* : \`\`\`%level (%exp / %maxexp))\`\`\`
-┃%emos│\`\`\`%totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
-┃%emos│ *ʟɪᴍɪᴛ* : %limit Limit
-┃%emos│ *ᴅᴀᴛᴇ* : \`\`\`%week, %date\`\`\`
-┃%emos│ *ᴛɪᴍᴇ* : \`\`\`%time\`\`\`
-┃%emos│ *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
-┃%emos│ *ᴅᴀᴛᴀʙᴀsᴇ* : \`\`\`%rtotalreg of %totalreg\`\`\`
-┃%emos│ \`\`\`sc bot : https://youtu.be/uCs1LszF_Ho\`\`\`
-┃%emos│
-┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos│   \`\`\`ᴛᴏxɪᴄ ᴀʟɪᴇɴ ©2021\`\`\`
-┃%emos╰─────────────────
-╰══════════════════⊷❍
+╭════〘 *_%me_* 〙════⊷❍➣
+┃%emos
+┃%emos
+┃%emos *Nombre* : \`\`\`%name\`\`\`
+┃%emos *ʀᴏʟᴇ* : \`\`\`%role\`\`\`
+┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃%emos\`\`\`%totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
+┃%emos *Límite* : %limit Limit
+┃%emos *Fecha* : \`\`\`%week, %date\`\`\`
+┃%emos *Hora* : \`\`\`%time\`\`\`
+┃%emos *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃%emos \`\`\`sc bot : https://youtu.be/UCM4iYb7wkra3HOUNQsN_ZkA\`\`\`
+┃%emos
+┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos  \`\`\`Toxico Batrol ©2021\`\`\`
+┃%emos
+╰══════════════════⊷❍➣
 
 %readmore`.trimStart(),
-  header: '╭════〘 *%category* 〙════⊷❍━\n┃%emos╭─────────────────',
-  body: '```┃%emos│ %cmd %islimit %isPremium```',
-  footer: '┃%emos╰─────────────────\n╰══════════════════⊷❍',
+  header: '╭════〘 *%category* 〙════⊷❍➣━\n┃%emos',
+  body: '```┃%emos %cmd %islimit %isPremium```',
+  footer: '┃%emos\n╰══════════════════⊷❍➣',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
