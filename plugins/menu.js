@@ -1,7 +1,6 @@
 let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
-let pp = '.src/safu.jpg'
 let tags = {
   'main': 'ᴍᴇɴᴜ',
   'game': 'ɢᴀᴍᴇ',
@@ -11,6 +10,7 @@ let tags = {
   'quotes': 'ǫᴜᴏᴛᴇs',
   'admin': 'ᴀᴅᴅᴍɪɴ',
   'group': 'ɢʀᴏᴜᴘ',
+  'audio': 'ᴀᴜᴅɪᴏ',
   'premium': 'ᴘʀᴇᴍɪᴜᴍ',
   'internet': 'ɪɴᴛᴇʀɴᴇᴛ',
   'anonymous': 'ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀᴛ',
@@ -28,25 +28,30 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-┍━ *_「 %me 」_*
-\`\`\`│ Hola, %name!\`\`\`
-│
-│%emos *Límite* : %limit Limit
-│%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
-\`\`\`│ %totalexp xp en Total\`\`\`
-│ 
-│%emos *Fecha* : \`\`\`%week, %date\`\`\`
-│%emos *Hora Islamica* : \`\`\`%dateIslamic\`\`\`
-│%emos *Hora* : \`\`\`%time\`\`\`
-│
-│%emos *Tiempo activo* : \`\`\`%uptime (%muptime)\`\`\`
-│%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
-│
-┕━━━━━
+  
+╭════〘 *_%me_* 〙════⊷❍
+┃%emos╭─────────────────
+┃%emos│
+┃%emos│ *ᴜsᴇʀ* : \`\`\`%name\`\`\`
+┃%emos│ *ʀᴏʟᴇ* : \`\`\`%role\`\`\`
+┃%emos│ *ʟᴇᴠᴇʟ* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃%emos│\`\`\`%totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
+┃%emos│ *ʟɪᴍɪᴛ* : %limit Limit
+┃%emos│ *ᴅᴀᴛᴇ* : \`\`\`%week, %date\`\`\`
+┃%emos│ *ᴛɪᴍᴇ* : \`\`\`%time\`\`\`
+┃%emos│ *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos│ *ᴅᴀᴛᴀʙᴀsᴇ* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃%emos│ \`\`\`sc bot : https://youtu.be/uCs1LszF_Ho\`\`\`
+┃%emos│
+┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos│   \`\`\`ᴛᴏxɪᴄ ᴀʟɪᴇɴ ©2021\`\`\`
+┃%emos╰─────────────────
+╰══════════════════⊷❍
 %readmore`.trimStart(),
-  header: '┍━〘 *%category* 〙⊷❍➣',
-  body: '```│ ❐ %cmd %islimit %isPremium```',
-  footer: '┕━━━━━⊷❍➣\n',
+  header: '╭════〘 *%category* 〙════⊷❍━\n┃%emos╭─────────────────',
+  body: '```┃%emos│ %cmd %islimit %isPremium```',
+  footer: '┃%emos╰─────────────────\n╰══════════════════⊷❍',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -55,7 +60,7 @@ ${'```%npmdesc```'}
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let { exp, limit, level } = global.DATABASE.data.users[m.sender]
+    let { exp, limit, level, role } = global.DATABASE.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -64,7 +69,10 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
-    let emos = ['✰', '✧', '✑', '✘', '✩'][Math.floor(d / 84600000) % 5]
+    function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())]
+}
+  let emos = ['✰', '✧', '✑', '✘', '✩'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
@@ -143,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      level, limit, name, emos, week, date, dateIslamic, time, totalreg, rtotalreg,
+      level, limit, name, emos, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
