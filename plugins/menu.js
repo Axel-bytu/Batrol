@@ -33,15 +33,15 @@ const defaultMenu = {
 ┃%emos
 ┃%emos
 ┃%emos *Nombre* : \`\`\`%name\`\`\`
-┃%emos *ʀᴏʟᴇ* : \`\`\`%role\`\`\`
+┃%emos *Rol* : \`\`\`%role\`\`\`
 ┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
-┃%emos\`\`\`%totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
+┃%emos\`\`\`%totalexp xp de nivel\`\`\`
 ┃%emos *Límite* : %limit Limit
 ┃%emos *Fecha* : \`\`\`%week, %date\`\`\`
 ┃%emos *Hora* : \`\`\`%time\`\`\`
-┃%emos *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos *Tiempo activo* : \`\`\`%uptime (%muptime)\`\`\`
 ┃%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
-┃%emos \`\`\`sc bot : https://youtu.be/UCM4iYb7wkra3HOUNQsN_ZkA\`\`\`
+┃%emos \`\`\`sc bot : https://youtu.be/\`\`\`
 ┃%emos
 ┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
