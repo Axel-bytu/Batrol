@@ -2,29 +2,31 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'ᴍᴇɴᴜ',
-  'game': 'ɢᴀᴍᴇ',
-  'xp': 'ᴇxᴘ & ʟɪᴍɪᴛ',
-  'sticker': 'sᴛɪᴄᴋᴇʀ',
-  'kerang': 'ᴍᴀɢɪᴄ sʜᴇʟʟs',
-  'quotes': 'ǫᴜᴏᴛᴇs',
-  'admin': 'ᴀᴅᴅᴍɪɴ',
-  'group': 'ɢʀᴏᴜᴘ',
-  'audio': 'ᴀᴜᴅɪᴏ',
-  'premium': 'ᴘʀᴇᴍɪᴜᴍ',
-  'internet': 'ɪɴᴛᴇʀɴᴇᴛ',
-  'anonymous': 'ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀᴛ',
-  'nulis': 'ᴍᴀᴊᴇʀɴᴀɪʟs & ʟᴏɢᴏ',
-  'downloader': 'ᴅᴏᴡɴʟᴏᴀᴅᴇʀ',
-  'tools': 'ᴛᴏᴏʟs',
-  'fun': 'ғᴜɴ',
-  'database': 'ᴅᴀᴛᴀʙᴀsᴇ',
-  'vote': 'ᴠᴏᴛɪɴɢ',
-  'jadibot': 'ᴊᴀᴅɪ ʙᴏᴛ',
-  'owner': 'ᴏᴡɴᴇʀ',
-  'host': 'ʜᴏsᴛ',
-  'advanced': 'ᴀᴅᴠᴀɴᴄᴇᴅ',
-  'info': 'ɪɴғᴏ',
+  'main': 'Main',
+  'game': 'Game',
+  'xp': 'Exp & Limit',
+  'sticker': 'Sticker',
+  'kerang': 'Kerang Ajaib',
+  'quotes': 'Quotes',
+  'admin': 'Admin',
+  'group': 'Group',
+  'premium': 'Premium',
+  'internet': 'Internet',
+  'anonymous': 'Anonymous Chat',
+  'nulis': 'MagerNulis & Logo',
+  'downloader': 'Downloader',
+  'tools': 'Tools',
+  'fun': 'Fun',
+  'database': 'Database',
+  'vote': 'Voting',
+  'absen': 'Absen',
+  'quran': 'Al Qur\'an',
+  'jadibot': 'Jadi Bot',
+  'owner': 'Owner',
+  'host': 'Host',
+  'advanced': 'Advanced',
+  'info': 'Info',
+  '': 'No Category',
 }
 const defaultMenu = {
   before: `
@@ -32,8 +34,8 @@ const defaultMenu = {
 ╭════〘 *_%me_* 〙════⊷❍➣
 ┃%emos
 ┃%emos
-┃%emos *Nombre* : \`\`\`%name\`\`\`
-┃%emos *Rol* : \`\`\`%role\`\`\`
+┃%emos *Hola* : \`\`\`%name\`\`\`
+┃%emos *Role* : \`\`\`%role\`\`\`
 ┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
 ┃%emos\`\`\`%totalexp xp de nivel\`\`\`
 ┃%emos *Límite* : %limit Limit
@@ -43,15 +45,15 @@ const defaultMenu = {
 ┃%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
 ┃%emos \`\`\`sc bot : https://youtu.be/\`\`\`
 ┃%emos
-┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos       ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos    ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos    ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃%emos  \`\`\`Toxico Batrol ©2021\`\`\`
 ┃%emos
 ╰══════════════════⊷❍➣
 
 %readmore`.trimStart(),
   header: '╭════〘 *%category* 〙════⊷❍➣',
-  body: '```┃%emos %cmd %islimit %isPremium```',
+  body: '```┃%emos ⊷➣ %cmd %islimit %isPremium```',
   footer: '╰══════════════════⊷❍➣',
   after: `
 *%npmname@^%version*
