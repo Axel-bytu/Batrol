@@ -29,24 +29,24 @@ let tags = {
 const defaultMenu = {
   before: `
 ┍━ *_「 %me 」_*
-\`\`\`│ ᴏɪ, %name!\`\`\`
+\`\`\`│ Hola, %name!\`\`\`
 │
-│%emos *ʟɪᴍɪᴛ* : %limit Limit
-│%emos *ʟᴇᴠᴇʟ* : \`\`\`%level (%exp / %maxexp))\`\`\`
-\`\`\`│ %totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
+│%emos *Límite* : %limit Limit
+│%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
+\`\`\`│ %totalexp xp en Total\`\`\`
 │ 
-│%emos *ᴅᴀᴛᴇ* : \`\`\`%week, %date\`\`\`
-│%emos *ᴅᴀᴛᴇ ᴀʀᴀʙɪᴄ* : \`\`\`%dateIslamic\`\`\`
-│%emos *ᴛɪᴍᴇ* : \`\`\`%time\`\`\`
+│%emos *Fecha* : \`\`\`%week, %date\`\`\`
+│%emos *Hora Islamica* : \`\`\`%dateIslamic\`\`\`
+│%emos *Hora* : \`\`\`%time\`\`\`
 │
-│%emos *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
-│%emos *ᴅᴀᴛᴀʙᴀsᴇ* : \`\`\`%rtotalreg of %totalreg\`\`\`
+│%emos *Tiempo activo* : \`\`\`%uptime (%muptime)\`\`\`
+│%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
 │
 ┕━━━━━
 %readmore`.trimStart(),
-  header: '┍━ *_「 %category 」_*',
+  header: '┍━〘 *%category* 〙⊷❍➣',
   body: '```│ ❐ %cmd %islimit %isPremium```',
-  footer: '┕━━━━━\n',
+  footer: '┕━━━━━⊷❍➣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
