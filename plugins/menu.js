@@ -29,36 +29,37 @@ let tags = {
 const defaultMenu = {
   before: `
   
-╭════〘 *_%me_* 〙════⊷❍
-┃%emos╭─────────────────
-┃%emos│
-┃%emos│ *ᴜsᴇʀ* : \`\`\`%name\`\`\`
-┃%emos│ *ʀᴏʟᴇ* : \`\`\`%role\`\`\`
-┃%emos│ *ʟᴇᴠᴇʟ* : \`\`\`%level (%exp / %maxexp))\`\`\`
-┃%emos│\`\`\`%totalexp xᴘ ɪɴ ᴛᴏᴛᴀʟ\`\`\`
-┃%emos│ *ʟɪᴍɪᴛ* : %limit Limit
-┃%emos│ *ᴅᴀᴛᴇ* : \`\`\`%week, %date\`\`\`
-┃%emos│ *ᴛɪᴍᴇ* : \`\`\`%time\`\`\`
-┃%emos│ *ᴜᴘᴛɪᴍᴇ* : \`\`\`%uptime (%muptime)\`\`\`
-┃%emos│ *ᴅᴀᴛᴀʙᴀsᴇ* : \`\`\`%rtotalreg of %totalreg\`\`\`
-┃%emos│ \`\`\`sc bot : https://youtu.be/uCs1LszF_Ho\`\`\`
-┃%emos│
-┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos│  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos│   \`\`\`ᴛᴏxɪᴄ ᴀʟɪᴇɴ ©2021\`\`\`
-┃%emos╰─────────────────
-╰══════════════════⊷❍
+╭════〘 *_%me_* 〙════⊷❍➣
+┃%emos
+┃%emos
+┃%emos *Hola* : \`\`\`%name\`\`\`
+┃%emos *Role* : \`\`\`%role\`\`\`
+┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃%emos\`\`\`%totalexp xp en Total\`\`\`
+┃%emos *Límite* : %limit Limit
+┃%emos *Fecha* : \`\`\`%week, %date\`\`\`
+┃%emos *Hora* : \`\`\`%time\`\`\`
+┃%emos *Tiempo activo* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos *Registros* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃%emos \`\`\`sc bot : https://\`\`\`
+┃%emos
+┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos   \`\`\`Toxic Batrol ©2021\`\`\`
+┃%emos
+╰══════════════════⊷❍➣
 %readmore`.trimStart(),
-  header: '╭════〘 *%category* 〙════⊷❍━\n┃%emos╭─────────────────',
-  body: '```┃%emos│ %cmd %islimit %isPremium```',
-  footer: '┃%emos╰─────────────────\n╰══════════════════⊷❍',
+  header: '╭════〘 *%category* 〙════⊷❍➣\n┃%emos',
+  body: '```┃%emos %cmd %islimit %isPremium```',
+  footer: '┃%emos\n╰══════════════════⊷❍➣',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
-  try {
+ conn.fakeReply(m.chat,  '*ESPERA⏳...*', '0@s.whatsapp.net', '*🌀Batrol🌀*')
+ try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let { exp, limit, level, role } = global.DATABASE.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
@@ -156,7 +157,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.reply(m.chat, text.trim(), m)
-  } catch (e) {
+    conn.sendFile(m.chat, 'tmp/broz.jpg', '', text.trim(), m)
+
+ } catch (e) {
     conn.reply(m.chat, 'sᴏᴍᴛʜɪɴɢ ᴇʀʀᴏʀ', m)
     throw e
   }
