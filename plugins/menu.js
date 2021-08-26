@@ -52,7 +52,7 @@ const defaultMenu = {
 ╰══════════════════⊷❍➣
 
 %readmore`.trimStart(),
-  header: '╭════〘 *%category* 〙════⊷❍➣\n┃%emos',
+  header: '╭════〘 *%category* 〙═⊷❍➣\n┃%emos',
   body: '```┃%emos %cmd %islimit %isPremium```',
   footer: '┃%emos\n╰═════════════⊷❍➣',
   after: `
@@ -160,7 +160,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.reply(m.chat, text.trim(), m)
-    conn.sendFile(m.chat, 'tmp/broz.jpg', '', text.trim(), m)
+    conn.sendFile(m.chat, 'tpm/broz.jpg', '', text.trim(), m)
 
   } catch (e) {
     conn.reply(m.chat, 'sᴏᴍᴛʜɪɴɢ ᴇʀʀᴏʀ', m)
