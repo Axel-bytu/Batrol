@@ -1,5 +1,5 @@
 <div align="center">
-  <img border-radius: 15px src="https://raw.githubusercontent.com/Axel-bytu/Batrol/main/tmp/IMG-20210524-WA0267.jpg" width="300" height="300"/>
+  <img border-radius: 15px src="https://raw.githubusercontent.com/Axel-bytu/Batrol/main/tpm/broz.jpg" width="275" height="300"/>
   <p align="center">
 <a href="#"><img title="BATROL" src="https://img.shields.io/badge/Batrol-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
