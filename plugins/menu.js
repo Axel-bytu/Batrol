@@ -31,7 +31,7 @@ let tags = {
 const defaultMenu = {
   before: `
   
-╭════〘 *_%me_* 〙════⊷❍➣
+╭════〘 *_%me_* 〙═══⊷❍➣
 ┃%emos
 ┃%emos
 ┃%emos *Hola* : \`\`\`%name\`\`\`
@@ -48,7 +48,7 @@ const defaultMenu = {
 ┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃%emos   \`\`\`Toxic Batrol ©2021\`\`\`
 ┃%emos
-╰══════════════════⊷❍➣
+╰════════════════⊷❍➣
 
 %readmore`.trimStart(),
   header: '╭════〘 *%category* 〙═⊷❍➣\n┃%emos',
@@ -158,7 +158,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.reply(m.chat, text.trim(), m)
     conn.sendFile(m.chat, 'tpm/broz.jpg', '', text.trim(), m)
 
   } catch (e) {
