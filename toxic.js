@@ -9,7 +9,7 @@ CFonts.say('TOXIC BATROL\n WHATSAPP BOT\nby toxic Axel|toxicBatrol\nv 2.0.0', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`'${package.name}' By @${package.author.name || package.author}`, {
+CFonts.say(`'${package.name}' By ${package.author.name || package.author}`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
