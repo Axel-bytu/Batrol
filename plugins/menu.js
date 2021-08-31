@@ -43,7 +43,6 @@ const defaultMenu = {
 ┃%emos *Hora* : \`\`\`%time\`\`\`
 ┃%emos *Timpo activo* : \`\`\`%uptime (%muptime)\`\`\`
 ┃%emos *Registro* : \`\`\`%rtotalreg of %totalreg\`\`\`
-┃%emos \`\`\`sc bot : https://youtu.be\`\`\`
 ┃%emos
 ┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
