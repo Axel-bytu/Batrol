@@ -7,7 +7,7 @@ handler.before = function (m, { isAdmin, isBotAdmin }) {
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink) {
-    m.reply('```ᴏᴏᴘs!!, ɴᴏᴛ ᴀʟʟᴏᴡᴅ ʟɪɴᴋ ɢʀᴏᴜᴘ```')
+    m.reply('```Eliminar!!\n\nSe detectó el enlace de grupo```')
     if (global.opts['remove']) {
       if (isAdmin || !isBotAdmin) return true
       // this.groupRemove(m.chat, [m.sender])
