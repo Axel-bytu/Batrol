@@ -24,10 +24,10 @@ handler.before = function (m) {
         }))
         if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
             m.reply({
-                '-3': 'ɢᴀᴍᴇ ʜᴀs ᴇɴᴅᴇᴅ',
-                '-2': 'ɪɴᴠᴀʟɪᴅ',
-                '-1': 'ᴘᴏsɪᴛɪᴏɴ ɪɴᴠᴀʟɪᴅ',
-                0: 'ᴘᴏsɪᴛɪᴏɴ ɪɴᴠᴀʟɪᴅ',
+                '-3': 'El juego ha terminado',
+                '-2': 'No válido',
+                '-1': 'Posición no válida',
+                0: 'Posición no válida',
             }[ok])
             return !0
         }
@@ -57,7 +57,7 @@ handler.before = function (m) {
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
-${isWin ? `@${winner.split('@')[0]} ᴡɪɴ! (+${winScore} XP)` : isTie ? `ɢᴀᴍᴇ ᴏᴠᴇʀ (+${playScore} XP)` : `ᴛᴜʀɴ ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `@${winner.split('@')[0]} ganar! (+${winScore} XP)` : isTie ? `juego terminado (+${playScore} XP)` : `girar ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
