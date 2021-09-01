@@ -7,21 +7,21 @@ async function handler(m, { command }) {
         case 'next':
         case 'leave': {
             let room = Object.values(this.anonymous).find(room => room.check(m.sender))
-            if (!room) throw 'ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ɪɴ ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀᴛ'
+            if (!room) throw 'No estás en el chat anónimo'
             m.reply('Ok')
             let other = room.other(m.sender)
-            if (other) this.sendMessage(other, 'ᴘᴀʀᴛɴᴇʀs ʟᴇᴠᴇ ᴄʜᴀᴛ', MessageType.text)
+            if (other) this.sendMessage(other, 'partners leve chat ', MessageType.text)
             delete this.anonymous[room.id]
             if (command === 'leave') break
         }
         case 'start': {
-            if (Object.values(this.anonymous).find(room => room.check(m.sender))) throw 'ʏᴏᴜ ᴀʀᴇ sᴛɪʟʟ ɪɴ ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀᴛ'
+            if (Object.values(this.anonymous).find(room => room.check(m.sender))) throw 'todavía estás en un chat anónimo'
             let room = Object.values(this.anonymous).find(room => room.state === 'WAITING' && !room.check(m.sender))
             if (room) {
                 this.sendMessage(room.a, 'ғɪɴᴅ ᴀ ᴘᴀʀᴛɴᴇʀ!', MessageType.text)
                 room.b = m.sender
                 room.state = 'CHATTING'
-                m.reply('ғɪɴᴅ ᴀ ᴘᴀʀᴛɴᴇʀ!')
+                m.reply('¡Encuentra un compañero!')
             } else {
                 let id = + new Date
                 this.anonymous[id] = {
@@ -36,7 +36,7 @@ async function handler(m, { command }) {
                         return who === this.a ? this.b : who === this.b ? this.a : ''
                     },
                 }
-                m.reply('ғɪɴᴅ ᴀ ᴘᴀʀᴛɴᴇʀ...')
+                m.reply('Encuentra un pareja...')
             }
             break
         }
