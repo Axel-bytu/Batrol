@@ -18,9 +18,9 @@ let handler = async (m, { conn }) => {
     let username = conn.getName(who)
     let aliven =`
     \`\`\`ᴏɪ\`\`\` *${username}*\n
-    \`\`\`ɪᴀᴍ ʜᴇʀᴇ!!!\`\`\`
-    \`\`\`ᴡʜᴀᴛ ʏᴏᴜ ᴡᴀɴᴛ ʙʀᴏ\`\`\`
-   *_🔋 ʙᴀᴛᴛᴇʀʏ_* : \`\`\`${conn.battery ? `${conn.battery.value}%\n${conn.battery.live ? '🔌 Charging...' : '⚡ Discharging'}` : 'Unknown'}\`\`\`
+    \`\`\`Estoy aquí!!!\`\`\`
+    \`\`\`Lo que quieres hermano\`\`\`
+   *_🔋 Batería_* : \`\`\`${conn.battery ? `${conn.battery.value}%\n${conn.battery.live ? '🔌 Cargando...' : '⚡ Descargado'}` : 'Unknown'}\`\`\`
     `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', aliven, m, false)
   }
