@@ -12,13 +12,13 @@ Mode: ${Object.keys(modes).join(' | ')}
 Ejemplo de uso : ${usedPrefix}math medium
 `.trim()
   let id = m.chat
-  if (id in conn.math) return conn.reply(m.chat, 'ᴛʜᴇʀᴇ ᴀʀᴇ sᴛɪʟʟ ᴜɴᴀɴsᴡᴇʀᴇᴅ ǫᴜᴇsᴛɪᴏɴs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ', conn.math[id][0])
+  if (id in conn.math) return conn.reply(m.chat, 'Todavia hay preguntas sin respuesta en el chat', conn.math[id][0])
   let math = genMath(mode)
   conn.math[id] = [
-    await conn.reply(m.chat, `ᴡʜᴀᴛ ɪs ᴛʜᴇ ʀᴇsᴜʟᴛ ᴏғ *${math.str}*?\n\nᴛɪᴍᴇ ᴏᴜᴛ : ${(math.time / 1000).toFixed(2)} sᴇᴄᴏɴᴅ\nᴄᴏʀʀᴇᴄᴛ ᴀɴsᴡᴇʀ ʙᴏɴᴜs : ${math.bonus} xᴘ`, m),
+    await conn.reply(m.chat, `Cual es el resultado de *${math.str}*?\n\nSe acabó el tiempo : ${(math.time / 1000).toFixed(2)} segundos\nBono de respuesta correcta : ${math.bonus} xp`, m),
     math, 4,
     setTimeout(() => {
-      if (conn.math[id]) conn.reply(m.chat, `ᴛɪᴍᴇ ɪs ᴜᴘ!\nᴛʜᴇ ᴀɴsᴡᴇʀ ɪs ${math.result}`, conn.math[id][0])
+      if (conn.math[id]) conn.reply(m.chat, `¡Se acabó el tiempo!\nLa respuesta es ${math.result}`, conn.math[id][0])
       delete conn.math[id]
     }, math.time)
   ]
