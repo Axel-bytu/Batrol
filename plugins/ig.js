@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'ᴡʜᴇʀᴇ ɪs ᴛʜᴇ ᴜʀʟ ʙʀᴏ!'
+  if (!args[0]) throw 'Donde esta la url bro!'
   let res = await fetch(global.API('xteam', '/dl/ig', {
     url: args[0]
   }, 'APIKEY'))
@@ -12,9 +12,9 @@ let handler = async (m, { conn, args }) => {
   if (!json.result) throw json
   let { name, username, likes, caption, data } = json.result
   let text = `
-Username: ${name} *(@${username})*
+Nombre de Usuario: ${name} *(@${username})*
 ${likes} Likes
-Caption:
+Subtítulo:
 ${caption}
 `.trim()
   for (let { data: url, type } of data)
