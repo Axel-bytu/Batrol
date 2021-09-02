@@ -16,7 +16,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
                 conn.sendFile(m.chat, buff, ran, null, m, true, { quoted: m, mimetype: 'audio/mp4' })
                 fs.unlinkSync(ran)
             })
-        } else throw `Reply to the vn/audio you want to change with a caption *${usedPrefix + command}*`
+        } else throw `Responda al vn/audio que desea cambiar con un título *${usedPrefix + command}*`
     } catch (e) {
         throw e
     }
