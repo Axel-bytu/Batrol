@@ -11,12 +11,12 @@ let handler = async (m, { conn }) => {
   } finally {
     let username = conn.getName(who)
   let github =`
-    *ᴏɪ* \`\`\`${username}\`\`\`\n
-   *_ɢɪᴛ ʜᴜʙ ʟɪsᴛ:-_*
+    *Oi* \`\`\`${username}\`\`\`\n
+   *_ɢɪᴛ ʜᴜʙ ʟɪsᴛᴀ:-_*
     
-    \`\`\`📦ᴛᴏxɪᴄ ᴀʟɪᴇɴ = https://github.com/Alien-alfa\`\`\`
+    \`\`\`📦ᴛᴏxɪᴄ ʙᴀᴛʀᴏʟ = https://github.com/Alien-Batrol\`\`\`
     
-    \`\`\`📦sᴀғᴡᴀɴɢᴀɴᴢ = https://github.com/SafwanGanz\`\`\`
+    \`\`\`📦ᴀxᴇʟ-ʙʏᴛᴜ = https://github.com/Axel-bytu\`\`\`
     `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', github, m, false)
   }
