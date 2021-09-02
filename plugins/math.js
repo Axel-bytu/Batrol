@@ -1,15 +1,15 @@
 let handler = async (m, { conn, args, usedPrefix }) => {
   conn.math = conn.math ? conn.math : {}
   if (args.length < 1) throw `
-ᴍᴏᴅᴇ : ${Object.keys(modes).join(' | ')}
+Mode : ${Object.keys(modes).join(' | ')}
 
-ᴜsᴀɢᴇ ᴇxᴀᴍᴘʟᴇs : ${usedPrefix}math medium
+Ejemplo de uso : ${usedPrefix}math medium
 `.trim()
   let mode = args[0].toLowerCase()
   if (!(mode in modes)) throw `
 Mode: ${Object.keys(modes).join(' | ')}
 
-ᴜsᴀɢᴇ ᴇxᴀᴍᴘʟᴇs : ${usedPrefix}math medium
+Ejemplo de uso : ${usedPrefix}math medium
 `.trim()
   let id = m.chat
   if (id in conn.math) return conn.reply(m.chat, 'ᴛʜᴇʀᴇ ᴀʀᴇ sᴛɪʟʟ ᴜɴᴀɴsᴡᴇʀᴇᴅ ǫᴜᴇsᴛɪᴏɴs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ', conn.math[id][0])
