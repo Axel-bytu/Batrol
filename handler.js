@@ -387,7 +387,7 @@ global.dfail = (type, m, conn) => {
      premium: '¡Este pedido es solo para miembros _ *Premium* _!',
      group: '¡Este comando solo se puede usar en grupos!',
      privado: '¡Este comando solo se puede usar en el chat privado!',
-     admin: '¡Este comando es solo para el grupo * Admin *!',
+     admin: '¡Este comando es solo para el grupo *Admin*!',
      botAdmin: '¡Hacer bot como *Admin* para usar este comando!',
      unreg: 'Por favor regístrese para usar esta función escribiendo:\n\n*#nombre de register. lista de edad *\n\nEjemplo: *#register tóxico.21*'
   }[type]
