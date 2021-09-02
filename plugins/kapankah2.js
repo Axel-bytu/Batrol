@@ -1,7 +1,7 @@
 let handler = async (m, { conn, command, text }) => {
   conn.reply(m.chat, `
-*Question:* ${m.text}
-*Answer:* ${Math.floor(Math.random() * 10)} ${pickRandom(['second', 'minute', 'Hour', 'day', 'sunday', 'month', 'year', 'decade', 'century'])} lagi ...
+*Pregunta:* ${m.text}
+*Respuesta:* ${Math.floor(Math.random() * 10)} ${pickRandom(['Segundo', 'Minuto', 'Hora', 'Día', 'Domingo', 'Mes', 'Año', 'Decada', 'Siglo'])} lagi ...
 `.trim(), m, m.mentionedJid ? {
   contextInfo: {
     mentionedJid: m.mentionedJid
