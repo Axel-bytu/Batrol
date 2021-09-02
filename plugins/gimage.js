@@ -3,7 +3,7 @@ let _gis = require('g-i-s')
 let gis = promisify(_gis)
 
 let handler  = async (m, { conn, args, text }) => {
-  if (!text) throw 'What are you looking for?'
+  if (!text) throw 'Qué estás buscando?'
   let results = await gis(text) || []
   let { url, width, height } = pickRandom(results) || {}
   if (!url) throw '404 Not Found'
@@ -11,8 +11,8 @@ let handler  = async (m, { conn, args, text }) => {
 *── 「 GOOGLE IMAGE 」 ──*
 
 ${text}
-➸ *width*: ${width}
-➸ *height*: ${height}
+➸ *Ancho*: ${width}
+➸ *Altura*: ${height}
 `.trim(), m)
 }
 handler.help = ['gimage <query>', 'image <query>']
