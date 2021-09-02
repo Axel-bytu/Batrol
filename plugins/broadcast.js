@@ -4,7 +4,7 @@ let handler  = async (m, { conn, text }) => {
   let teks = text ? text : cc.text
   conn.reply(m.chat, `__Send a broadcast message to ${chats.length} chat_`, m)
   for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 ʙʀᴏᴀᴅ ᴄᴀsᴛ ʙʏ ᴛᴏxɪᴄ ʙᴏᴛ 」\n' + randomID(32)), true).catch(_=>_)
-  m.reply('ᴅᴏɴᴇ !!!. ᴀʟʟ ᴄʜᴀᴛ ʙʀᴏᴀᴅᴄᴀsᴛ!! :)')
+  m.reply('Lísto !!!. Toda la transmisión de chat!! :)')
 }
 handler.help = ['broadcast','bc'].map(v => v + ' <teks>')
 handler.tags = ['owner']
