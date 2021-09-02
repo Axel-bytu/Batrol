@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'ᴡʜᴇʀᴇ ɪs ᴛʜᴇ ᴜʀʟ ʙʀᴏ!'
+  if (!args[0]) throw 'Donde esta la url bro!'
   let res = await fetch(global.API('xteam', '/dl/igs', {
     nama: args[0]
   }, 'APIKEY'))
