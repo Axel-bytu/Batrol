@@ -5,7 +5,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   let teks = text ? text : cc.text
   let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 ʙʀᴏᴀᴅᴄᴀsᴛ ʙʏ ᴛᴏxɪᴄ ʙᴏᴛ 」')
   for (let id of users) conn.copyNForward(id, content, true)
-  conn.reply(m.chat, `_Successfully sent broadcast to ${users.length} nomor yang jadi bot_
+  conn.reply(m.chat, `_Transmisión enviada con éxito a ${users.length} número a ser bot_
 ${users.map(v => 'wa.me/' + v.replace(/[^0-9]/g, '') + `?text=${usedPrefix}menu`).join('\n')}`.trim(), m)
 }
 handler.help = ['broadcastjadibot', 'bcbot'].map(v => v + ' <teks>')
