@@ -2,23 +2,23 @@ let linkRegex = /chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
 
 let handler = async (m, { conn, text }) => {
   let [, code] = text.match(linkRegex) || []
-  if (!code) throw 'Link invalid'
+  if (!code) throw 'Enlace invalido'
   let res = await conn.query({
     json: ["query", "invite", code],
     expect200: true
   })
   if (!res) throw res
   let caption = `
--- [Group Link Inspector] --
+-- [Inspector de enlaces de grupo] --
 ${res.id}
-*Title:* ${res.subject}
-*Created* by @${res.id.split('-')[0]} on *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
-*Title changed* by @${res.subjectOwner.split`@`[0]} on *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
-*Description changed* by @${res.descOwner.split`@`[0]} on *${formatDate(res.descTime * 1000)}*` : ''}
-*Number of Members:* ${res.size}
-*Members known to join*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '.@' + user.id.split`@`[0]).join('\n').trim( ) : 'Nothing'}
-${res.desc ? `*Description:*
-${res.desc}` : '*No Description*'}
+*Título:* ${res.subject}
+*Creado* por @${res.id.split('-')[0]} on *${formatDate(res.creation * 1000)}*${res.subjectOwner ? `
+*Título cambiado* por @${res.subjectOwner.split`@`[0]} on *${formatDate(res.subjectTime * 1000)}*`: ''}${res.descOwner ? `
+*Descripción modificada* por @${res.descOwner.split`@`[0]} on *${formatDate(res.descTime * 1000)}*` : ''}
+*Número de miembros:* ${res.size}
+*Miembros conocidos por unirse*: ${res.participants ? '\n' + res.participants.map((user, i) => ++i + '.@' + user.id.split`@`[0]).join('\n').trim( ) : 'Nothing'}
+${res.desc ? `*Descripción:*
+${res.desc}` : '*No Descripción*'}
 
 *JSON Version*
 \`\`\`${JSON.stringify(res, null, 1)}\`\`\`
