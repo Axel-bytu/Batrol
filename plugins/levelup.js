@@ -5,8 +5,8 @@ let handler = m => {
   if (!levelling.canLevelUp(user.level, user.exp, global.multiplier)) {
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     throw `
-Level *${user.level} (${user.exp - min}/${xp})*
-Less *${max - user.exp}* Again!
+Nivel *${user.level} (${user.exp - min}/${xp})*
+Menos *${max - user.exp}* ¡De nuevo!
 `.trim()
   }
   let before = user.level * 1
@@ -23,9 +23,9 @@ Less *${max - user.exp}* Again!
 
 	if (before !== user.level) {
             m.reply(`
-Congratulations, you have leveled up!
+¡Felicitaciones, has subido de nivel!
 *${before}* -> *${user.level}*
-use *.profile* to check
+use *.profile* verificar 
 	`.trim())
             user.role = role
         }
