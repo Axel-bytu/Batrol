@@ -4,7 +4,7 @@ let handler = async (m, { conn, text }) => {
     let [_, code] = text.match(linkRegex) || []
     if (!code) throw 'Link invalid'
     let res = await conn.acceptInvite(code)
-    m.reply(`sᴜᴄᴄᴇssғᴜʟʟʏ ᴊᴏɪɴᴇᴅ ɢʀᴏᴜᴘ \`\`\`${res.gid}\`\`\``)
+    m.reply(`Se unió al grupo con éxito\`\`\`${res.gid}\`\`\``)
 }
 handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['premium']
