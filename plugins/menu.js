@@ -158,10 +158,10 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendFile(m.chat, 'tpm/broz.jpg', '', text.trim(), m)
+    conn.sendFile(m.chat, 'media/broz.jpg', '', text.trim(), m)
 
   } catch (e) {
-    conn.reply(m.chat, 'sᴏᴍᴛʜɪɴɢ ᴇʀʀᴏʀ', m)
+    conn.reply(m.chat, 'algo error', m)
     throw e
   }
 }
