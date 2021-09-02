@@ -1,11 +1,11 @@
 let handler = async (m, { conn, text }) => {
   conn.hartatahta = conn.hartatahta ? conn.hartatahta : {}
-  if (m.chat in conn.hartatahta) throw 'Anyone is still making\nThe Throne Text\n this chat...wait for it to finish'
+  if (m.chat in conn.hartatahta) throw 'Alguien todavía está haciendo\nThe Throne Text\neste chat...espera a que termine'
    else conn.hartatahta[m.chat] = true
-   m.reply('_Creating..._\n*Please wait about 1 minute*')
+   m.reply('_Creando..._\n*Espere aproximadamente 1 minuto*')
   try {
     let img = await ht(text ? text : ':v')
-    conn.sendFile(m.chat, img, 'Harta Tahta.png', '*© Toxic Alien*\nMade with FFmpeg', m)
+    conn.sendFile(m.chat, img, 'Harta Tahta.png', '*© Toxic Batrol*\nMade with FFmpeg', m)
   } finally {
     delete conn.hartatahta[m.chat]
   }
