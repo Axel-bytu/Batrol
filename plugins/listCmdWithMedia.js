@@ -1,6 +1,6 @@
 module.exports = Object.assign(m => global.DATABASE.data.sticker ? m.reply(`
 *LIST HASH*
-Info: *bold* hash is Locked
+Info: *bold* hash está bloqueado
 
 \`\`\`
 ${Object.entries(global.DATABASE.data.sticker).map(([key, value], index) => `${index + 1}. ${value.locked ? `*${key}*` : key} : ${value.text}`).join('\n')}
@@ -9,7 +9,7 @@ ${Object.entries(global.DATABASE.data.sticker).map(([key, value], index) => `${i
     contextInfo: {
         mentionedJid: Object.values(global.DATABASE.data.sticker).map(x => x.mentionedJid).reduce((a,b) => [...a, ...b], [])
     }
-}) : m.reply('Nothing 🤷🏻‍♂️'), {
+}) : m.reply('Nada 🤷🏻‍♂️'), {
     help: ['cmd'].map(v => 'list' + v + ' <text>'),
     tags: ['database'],
     command: ['listcmd']
