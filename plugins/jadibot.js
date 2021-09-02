@@ -37,7 +37,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.on('CB:action,,call', conn.onCall)
     conn.regenerateQRIntervalMs = null
     conn.connect().then(async ({ user }) => {
-      parent.reply(m.chat, 'Successfully connected to your WhatsApp - mu.\n*NOTE: This is just a ride*\n' + JSON.stringify(user, null, 2), m)
+      parent.reply(m.chat, 'Conectado exitosamente a su WhatsApp - mu.\n*NOTA:Esto es solo un viaje*\n' + JSON.stringify(user, null, 2), m)
        if (auth) return
        await parent.sendMessage(user.jid, `You can login without qr with the message below. To get the full code, please send *${usedPrefix}getcode* to get the accurate code`, MessageType.extendedText)
        parent.sendMessage(user.jid, `${usedPrefix + command} ${Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')}`, MessageType.extendedText)
@@ -64,7 +64,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       }, 30000)
     })
     global.conns.push(conn)
-  } else throw `Can't create bot inside bot!\n\nhttps://wa.me/` + global.conn.user.jid.split`@`[0] + '?text=.jadibot'
+  } else throw `¡No se puede crear un bot dentro de un bot!\n\nhttps://wa.me/` + global.conn.user.jid.split`@`[0] + '?text=.jadibot'
 }
 handler.help = ['getconnection']
 handler.tags = ['jadibot']
