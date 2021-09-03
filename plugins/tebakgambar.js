@@ -6,7 +6,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
     conn.tebakgambar = conn.tebakgambar ? conn.tebakgambar : {}
     let id = m.chat
     if (id in conn.tebakgambar) {
-        conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakgambar[id][0])
+        conn.reply(m.chat, 'Todavía hay preguntas sin respuesta en este chat', conn.tebakgambar[id][0])
         throw false
     }
     let res = await fetch(global.API('xteam', '/game/tebakgambar', {}, 'APIKEY'))
