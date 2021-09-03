@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) throw `_*ɴᴏ ᴠᴏᴛɪɴɢ ɪɴ ᴛʜɪs grouʏp!*_\n\n*${usedPrefix}sᴛᴀʀᴛɪᴠᴏᴛᴇ* - ᴛᴏ sᴛᴀʀᴛ ᴠᴏᴛɪɴɢ`
+    if (!(id in conn.vote)) throw `_*¡No hay votaciones en este grupo!*_\n\n*${usedPrefix}mulaivote* - para empezar a votar`
     delete conn.vote[id]
     m.reply(`listo!`)
 
