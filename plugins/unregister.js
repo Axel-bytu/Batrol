@@ -1,9 +1,9 @@
 const { createHash } = require('crypto')
 let handler = async function (m, { args }) {
-  if (!args[0]) throw 'ᴇᴍᴘᴛʏ sᴇʀɪᴀʟ ɴᴜᴍʙᴇʀ'
+  if (!args[0]) throw 'número de serie vacío'
   let user = global.DATABASE._data.users[m.sender]
   let sn = createHash('md5').update(m.sender).digest('hex')
-  if (args[0] !== sn) throw 'sᴇʀɪᴀʟ ɴᴜᴍʙᴇʀ ᴡʀᴏɴɢ!'
+  if (args[0] !== sn) throw 'número de serie incorrecto!'
   user.registered = false
   m.reply(`Unreg berhasil!`)
 }
