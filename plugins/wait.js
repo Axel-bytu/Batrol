@@ -5,10 +5,10 @@ const fetch = require('node-fetch')
 let handler = async (m, { conn, usedPrefix }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw `Reply Foto/Kirim Foto Dengan Caption ${usedPrefix}wait`
+  if (!mime) throw `Responder foto/Enviar foto con título ${usedPrefix}wait`
   if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
   let img = await q.download()
-  await m.reply('Searching Anime Titles...')
+  await m.reply('Búsqueda de títulos de anime...')
   let anime = `data:${mime};base64,${img.toString('base64')}`
   let response = await fetch('https://trace.moe/api/search', {
     method: 'POST',
@@ -24,11 +24,11 @@ let handler = async (m, { conn, usedPrefix }) => {
   let nobuyaki = `
 ${similarity < 0.89 ? 'I Have Low Confidence About This' : ''}
 
-❏ ᴊᴀᴘᴀɴᴇsᴇ ᴛɪᴛʟᴇ : *${title}*
-❏ sᴘᴇʟʟɪɴɢ ᴛɪᴛʟᴇ : *${title_romaji}*
-❏ sɪᴍɪʟᴀʀɪᴛʏ : *${(similarity * 100).toFixed(1)}%*
-❏ ᴇᴘᴘɪsᴏᴅᴇ : *${episode.toString()}*
-❏ ᴇᴄᴄʜɪ : *${is_adult ? 'Yes' : 'No'}*
+❏ Título japonés : *${title}*
+❏ Título de ortografía : *${title_romaji}*
+❏ Semejanza : *${(similarity * 100).toFixed(1)}%*
+❏ Episodio : *${episode.toString()}*
+❏ Ecchi : *${is_adult ? 'Yes' : 'No'}*
 `.trim()
   conn.sendFile(m.chat, link, 'srcanime.mp4', `${nobuyaki}`, m)
 }
