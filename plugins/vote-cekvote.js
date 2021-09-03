@@ -1,26 +1,26 @@
 let handler = async (m, { conn, usedPrefix }) => {
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) throw `_*ɴᴏ ᴠᴏᴛɪɴɢ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ!*_\n\n*${usedPrefix}sᴛᴀʀᴛɪᴠᴏᴛᴇ* - ᴛᴏ sᴛᴀʀᴛ ᴠᴏᴛɪɴɢ`
+    if (!(id in conn.vote)) throw `_*¡No hay votaciones en este grupo!*_\n\n*${usedPrefix}sᴛᴀʀᴛɪᴠᴏᴛᴇ* - para empezar a votar`
     
     let [reason, upvote, devote] = conn.vote[id]
     let mentionedJid = [...upvote, ...devote]
     m.reply(
-`*_「 ᴠᴏᴛᴇ 」_*
+`*_「 VOTAR 」_*
 
-*ʀᴇᴀsᴏɴ:* ${reason}
+*razón:* ${reason}
 
-*ᴜᴘᴠᴏᴛᴇ*
-_ᴛᴏᴛᴀʟ: ${upvote.length}_
+*UPVOTE*
+_total: ${upvote.length}_
 ${upvote.map(u => '@' + u.split('@')[0]).join('\n')}
 
-*ᴅᴇᴠᴏᴛᴇ*
-_ᴛᴏᴛᴀʟ: ${devote.length}_
+*DEVOTE*
+_total: ${devote.length}_
 ${devote.map(u => '@' + u.split('@')[0]).join('\n')}}
 
-*${usedPrefix}hapusvote* - ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴠᴏᴛᴇs
+*${usedPrefix}hapusvote* - para eliminar votos
 
-_by safwan_
+_by broz_
 `.trim(), false, { contextInfo: { mentionedJid } })
 }
 handler.help = ['cekvote']
