@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
   global.DATABASE._data.chats[m.chat].isBanned = false
-  m.reply('ᴜɴʙᴀɴɴᴇᴅ ᴛʜɪs ᴄʜᴀᴛ!')
+  m.reply('Batrol bot activo en chat!')
 }
 handler.help = ['unbanchat']
 handler.tags = ['owner']
