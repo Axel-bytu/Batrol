@@ -3,8 +3,8 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     if (isROwner) global.conn.welcome = text
     else if (isOwner) conn.welcome = text
     global.DATABASE._data.chats[m.chat].sWelcome = text
-    m.reply('ᴡᴇʟᴄᴏᴍᴇ sᴇᴛ sᴜᴄᴄᴇssғᴜʟʟʏ\n@ᴜsᴇʀ (Mention)\n@sᴜʙᴊᴇᴄᴛ (Group Title)\n@ᴅᴇsᴄʀɪᴘᴛɪᴏɴ (Group Description)')
-  } else throw 'ᴡʜᴇʀᴇ ɪs ᴛʜᴇ ᴛᴇxᴛ?'
+    m.reply('Bienvenida establecida con éxito\n@ᴜsᴇʀ (Mention)\n@tema (Group Title)\n@descripción (Group Description)')
+  } else throw '¿donde esta el texto?'
 }
 handler.help = ['setwelcome <text>']
 handler.tags = ['owner', 'group']
