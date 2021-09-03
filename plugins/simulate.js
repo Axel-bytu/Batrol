@@ -3,7 +3,7 @@ let handler = async (m, { conn, args: [event], text }) => {
     let who = mentions ? conn.parseMention(mentions) : []
     let participants = who.length ? who : [m.sender]
     let action = false
-    m.reply(`Simulating ${event}...`)
+    m.reply(`Simulando ${event}...`)
     switch (event.toLowerCase()) {
         case 'add':
         case 'invite':
@@ -25,7 +25,7 @@ let handler = async (m, { conn, args: [event], text }) => {
         case 'delete':
             deleted = m
             break
-        default: throw `List Event: welcome, bye, delete, promote, demote`
+        default: throw `Lísta Evento: welcome, bye, delete, promote, demote`
     }
     if (action) return conn.onParticipantsUpdate({
         jid: m.chat,
