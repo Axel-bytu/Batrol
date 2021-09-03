@@ -2,9 +2,9 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     conn.vote = conn.vote ? conn.vote : {}
     let id = m.chat
     if (id in conn.vote) {
-        throw `_ᴛʜᴇʀᴇ ᴀʀᴇ sᴛɪʟʟ ᴠᴏᴛᴇs ɪɴ ᴛʜɪs ᴄʜᴀᴛ!_\n\n*${usedPrefix}ᴅᴇʟᴇᴛᴇᴠᴏᴛᴇs* - ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴠᴏᴛᴇs`
+        throw `_¡Todavía hay votos en este chat!_\n\n*${usedPrefix}hapusvote* - para eliminar voto`
     }
-    m.reply(`ᴠᴏᴛᴇ sᴛᴀʀᴛs!\n\n*${usedPrefix}ᴜᴘᴠᴏᴛᴇ* - ғᴏʀ ʏᴇs\n*${usedPrefix}ᴅᴇᴠᴏᴛᴇ* - ғᴏʀ ɴᴏ\n*${usedPrefix}ᴄʜᴇᴄᴋᴠᴏᴛᴇ* - ᴛᴏ ᴄʜᴇᴄᴋ ᴠᴏᴛᴇ\n*${usedPrefix}ᴅᴇʟᴇᴛᴇᴠᴏᴛᴇ * - ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴠᴏᴛᴇs`)
+    m.reply(`¡Comienza la votación!\n\n*${usedPrefix}upvote* - con seguridad\n*${usedPrefix}devote* - por no\n*${usedPrefix}cekvote* - por comprobar voto\n*${usedPrefix}hapusvote* - para eliminar votos`)
     conn.vote[id] = [
         text,
         [],
