@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'ᴡʜᴇʀᴇ ɪs ᴛʜᴇ ᴜʀʟ ʙʀᴏ?'
+  if (!args[0]) throw 'donde esta la ᴜʀʟ ʙʀᴏ?'
   global.API('xteam', '/dl/twitter', {
     url: args[0]
   }, 'APIKEY')
