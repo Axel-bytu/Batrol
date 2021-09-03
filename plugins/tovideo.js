@@ -1,9 +1,9 @@
 let webp2mp4 = require('../lib/webp2mp4')
 let { ffmpeg } = require('../lib/converter')
 let handler = async (m, { conn }) => {
-    if (!m.quoted) throw 'ʀᴇᴘʟʏ sᴛɪᴄᴋᴇʀ ᴏʀ ᴀᴜᴅɪᴏ!'
+    if (!m.quoted) throw 'respuesta pegatina o audio!'
     let mime = m.quoted.mimetype || ''
-    if (!/webp|audio/.test(mime)) throw 'ʀᴇᴘʟʏ sᴛɪᴄᴋᴇʀ ᴏʀ ᴀᴜᴅɪᴏ!'
+    if (!/webp|audio/.test(mime)) throw 'respuesta pegatina o audio!'
     let media = await m.quoted.download()
     let out = Buffer.alloc(0)
     if (/webp/.test(mime)) {
