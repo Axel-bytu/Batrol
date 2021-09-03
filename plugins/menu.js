@@ -33,7 +33,6 @@ const defaultMenu = {
   
 ╭════〘 *_%me_* 〙═══⊷❍➣
 ┃%emos
-┃%emos
 ┃%emos *Hola* : \`\`\`%name\`\`\`
 ┃%emos *Role* : \`\`\`%role\`\`\`
 ┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
@@ -44,10 +43,9 @@ const defaultMenu = {
 ┃%emos *Timpo activo* : \`\`\`%uptime (%muptime)\`\`\`
 ┃%emos *Registro* : \`\`\`%rtotalreg of %totalreg\`\`\`
 ┃%emos
-┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos  ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃%emos   \`\`\`Toxic Batrol ©2021\`\`\`
-┃%emos
+┃%emos     ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos     ▎▍▌▌▉▏▎▌▉▐▏▌▎
+┃%emos  \`\`\`Toxic Batrol ©2021\`\`\`
 ╰════════════════⊷❍➣
 
 %readmore`.trimStart(),
