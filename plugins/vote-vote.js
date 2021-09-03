@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
     let id = m.chat
     conn.vote = conn.vote ? conn.vote : {}
-    if (!(id in conn.vote)) throw `_*ɴᴏ ᴠᴏᴛɪɴɢ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ!*_\n\n*${usedPrefix}sᴛᴀʀᴛɪᴠᴏᴛᴇ* - ᴛᴏ sᴛᴀʀᴛ ᴠᴏᴛɪɴɢ`
+    if (!(id in conn.vote)) throw `_*¡No hay votaciones en este grupo!*_\n\n*${usedPrefix}sᴛᴀʀᴛɪᴠᴏᴛᴇ* - para empezar a votar``
     let isVote = conn.vote[id][1].concat(conn.vote[id][2])
     const wasVote = isVote.includes(m.sender)
     if (wasVote) throw 'ʏᴏᴜ ʜᴀᴠᴇ ᴠᴏᴛᴇᴅ!!'
@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     } else if (/de/i.test(command)) {
         conn.vote[id][2].push(m.sender)
     }
-    m.reply(`ᴅᴏɴᴇ\n\n*${usedPrefix}cekvote* - ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴠᴏᴛᴇ`)
+    m.reply(`Lísto\n\n*${usedPrefix}cekvote* - para comprobar el voto`)
 
 }
 handler.help = ['vote']
