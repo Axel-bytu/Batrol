@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
     let id = m.chat
     if (id in conn.tebaklagu) {
-        conn.reply(m.chat, 'ᴛʜᴇʀᴇ ᴀʀᴇ sᴛɪʟʟ ᴜɴᴀɴsᴡᴇʀᴇᴅ ǫᴜᴇsᴛɪᴏɴs ɪɴ ᴛʜɪs ᴄʜᴀᴛ', conn.tebaklagu[id][0])
+        conn.reply(m.chat, 'Todavía hay preguntas sin responder en este chat', conn.tebaklagu[id][0])
         throw false
     }
     // ubah isi 'id' kalo mau ganti playlist spotifynya
@@ -16,16 +16,16 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = result.result
     // if (!json.status) throw json
     let caption = `
-ɢᴜᴇss ᴛʜᴇ sᴏɴɢ ᴛɪᴛʟᴇ
-ᴛɪᴍᴇᴏᴜᴛ *${(timeout / 1000).toFixed(2)} sᴇᴄᴏɴᴅs*
-ᴛʏᴘᴇ *${usedPrefix}ᴄʜᴇᴄᴋ* ғᴏʀ ʜᴇʟᴘ
-ʙᴏɴᴜs : ${points} xᴘ
-*ʀᴇᴘʟʏ ᴛᴏ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ᴀɴsᴡᴇʀ*`.trim()
+Adivina el título de la canción
+Se acabó el tiempo *${(timeout / 1000).toFixed(2)} segundos*
+Escribe *${usedPrefix}ᴄʜᴇᴄᴋ* buscar ayuda
+Prima : ${points} xp
+*responde a este mensaje para responder*`.trim()
     conn.tebaklagu[id] = [
         await m.reply(caption),
         json, poin,
         setTimeout(() => {
-            if (conn.tebaklagu[id]) conn.reply(m.chat, `ᴛɪᴍᴇ ɪs ᴜᴘ!\nᴛʜᴇ ᴀɴsᴡᴇʀ ɪs *${json.judul}*`, conn.tebaklagu[id][0])
+            if (conn.tebaklagu[id]) conn.reply(m.chat, `¡Se acabó el tiempo!\nla respuesta es *${json.judul}*`, conn.tebaklagu[id][0])
             delete conn.tebaklagu[id]
         }, timeout)
     ]
