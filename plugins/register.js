@@ -10,29 +10,29 @@ let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gam
   } finally {
   let user = global.DATABASE._data.users[m.sender]
   if (user.registered === true) throw `You are already registered\nWant to re-register? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
-  if (!Reg.test(text)) throw `ᴡʀᴏɴɢ ғᴏʀᴍᴀᴛ\n*${usedPrefix}register age.age*`
+  if (!Reg.test(text)) throw `Formato erróneo\n*${usedPrefix}register age.age*`
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw 'ɴᴀᴍᴇs ᴄᴀɴɴᴏᴛ ʙᴇ ᴇᴍᴘᴛʏ (Alphanumeric) '
-  if (!age) throw 'ᴀɢᴇ ᴄᴀɴɴᴏᴛ ʙᴇ ʙʟᴀɴᴋ (Numbers)'
+  if (!name) throw 'Los nombres no pueden estar vacíos (Alphanumeric) '
+  if (!age) throw 'La edad no puede estar en blanco (Numbers)'
   age = parseInt(age)
-  if (age > 40) throw 'ᴀɢᴇ ᴛᴏᴏ ᴏʟᴅ 😂 ᴘʟᴇᴀs ᴅᴇᴀᴅ'
-  if (age < 5) throw 'ʙᴀʙɪᴇs ᴄᴀɴ ᴛʏᴘᴇ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛʜᴇ ʙᴊɪʀʀ ғᴏʀᴍᴀᴛ._.'
+  if (age > 40) throw 'Edad demasiado viejo 😂 por favor muerto'
+  if (age < 5) throw 'Los bebés pueden escribir según el formato ʙᴊɪʀʀ ._.'
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   let verif =`
-ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ sᴜᴄᴄᴇss!!
+éxito en la verificación!!
 
-┍ *_「 ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ 」_*
-│ ☞ *ɴᴀᴍᴇ* : ${name}
-│ ☞ *ᴀɢᴇ* : ${age} ʏᴇᴀʀ ᴏʟᴅ
-│ ☞ *sɴ* : 
+┍ *_「 Verificación 」_*
+│ ☞ *Nombre* : ${name}
+│ ☞ *Edad* : ${age} Años de edad
+│ ☞ *SN* : 
 │ ${sn}
 │  ▎▍▌▌▉▏▎▌▉▐▏▌▎▏
 │  ▎▍▌▌▉▏▎▌▉▐▏▌▎▏
-│     Batrol ᴀʟɪᴇɴ ©2021
+│   Toxic Batrol  ©2021
 ┕━━━━━━━━━━━━━━━━━
 `.trim()
 conn.sendFile(m.chat, pp, 'pp.jpg', verif, m, false)
