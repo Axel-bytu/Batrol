@@ -4,8 +4,8 @@ let handler = async function (m, { text, usedPrefix }) {
 let user = global.DATABASE._data.users[m.sender]
 let sn = createHash('md5').update(m.sender).digest('hex')
     m.reply(`
-  ʏᴏᴜʀ sᴇʀɪᴀʟ ɴᴜᴍʙᴇʀ :\n
-  sɴ : ${sn}
+  Su número de serie :\n
+  sn : ${sn}
   `.trim())
 }
 handler.help = ['serial']
