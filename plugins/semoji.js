@@ -12,9 +12,9 @@ let handler = async (m, { usedPrefix, conn, args, text }) => {
     tipe = defaultType
   }
   if (!emoji) throw `
-Please enter the emoji
+Por favor ingrese el emoji
 
-For example ${UsedPrefix}emoji whatsapp
+Por ejemplo ${UsedPrefix}emoji whatsapp
 
 List Type:
 ${[
