@@ -38,32 +38,32 @@ let handler = async (m, { conn }) => {
     }
   })
   let old = performance.now()
-  await m.reply('_⏱️ ᴛᴇsᴛɪɴɢ sᴘᴇᴇᴅ..._')
+  await m.reply('_⏱️ velocidad de prueba..._')
   let neww = performance.now()
   let speed = neww - old
   let txt = `
-ʀᴇsᴘᴏɴᴅ ɪɴ ${speed} ᴍɪʟʟɪ sᴇᴄᴏɴᴅs
+Responder en ${speed} milisegundos
 
-🖥️ *_sᴛᴀᴛᴜs_* 🖥️ :
-- ɢʀᴏᴜᴘs ᴄʜᴀᴛs *${groups.length}* 
-- ɢʀᴏᴜᴘs ᴊᴏɪɴᴇᴅ *${groupsIn.length}* 
-- ɢʀᴏᴜᴘs ʟᴇғᴛ *${groups.length - groupsIn.length}* 
-- ᴘᴇʀsᴏɴᴀʟ ᴄʜᴀᴛs *${chats.length - groups.length}* 
-- ᴛᴏᴛᴀʟ ᴄʜᴀᴛs *${chats.length}* 
+🖥️ *_Estado_* 🖥️ :
+- Chats grupales *${groups.length}* 
+- Grupos unidos *${groupsIn.length}* 
+- Grupos a la izquierda *${groups.length - groupsIn.length}* 
+- Chats privados *${chats.length - groups.length}* 
+- Chats totales *${chats.length}* 
 
-🖥️ *_sʏsᴛᴇᴍ ɪɴғᴏ_* 🖥️:
+🖥️ *_información del sistema_* 🖥️:
 ${'```' + `
-🔋 ʙᴀᴛᴛᴇʀʏ : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charging...' : '⚡ Discharging'}` : 'Unknown'}
+🔋 Batería : ${conn.battery ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Cargando...' : '⚡ Discagado'}` : 'Unknown'}
 ${util.format(conn.user.phone)}
 `.trim() + '```'}
 
-📡 *_sᴇʀᴠᴇʀ ɪɴғᴏ_* 📡:
-ʀᴀᴍ: ${format(os.totalmem() - os.freemem())} / ${format(os.totalmem())}
+📡 *_Servidor de información_* 📡:
+RAM: ${format(os.totalmem() - os.freemem())} / ${format(os.totalmem())}
 
-📟 *_ɴᴏᴅᴇᴊs ᴍᴇᴍᴍᴏʀʏ ᴜsᴀɢᴇ_* 📟:
+📟 *_Uso de memoria de Nodejs_* 📟:
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${format(used[key])}`).join('\n') + '```'}
 
-${cpus[0] ? `📉 *_ᴛᴏᴛᴀʟ ᴄᴘᴜ ᴜsᴀɢᴇ_* 📉:
+${cpus[0] ? `📉 *_Uso total de la CPU_* 📉:
 ${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
 
 _CPU Core(s) Usage (${cpus.length} Core CPU)_
