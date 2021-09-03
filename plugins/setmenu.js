@@ -3,19 +3,19 @@ let handler  = async (m, { conn, command, text }) => {
   if (type == '') {
     if (text) {
       conn.menu = text
-      conn.reply(m.chat, 'Menu berhasil diatur\n' + info, m)
+      conn.reply(m.chat, 'Menú configurado correctamente\n' + info, m)
     } else {
       conn.menu = {}
-      conn.reply(m.chat, 'Menu direset', m)
+      conn.reply(m.chat, 'Reinicio del menú', m)
     }
   } else {
     conn.menu = typeof conn.menu == 'object' ? conn.menu : {}
     if (text) {
       conn.menu[type] = text
-      conn.reply(m.chat, 'Menu ' + type + ' berhasil diatur\n' + info, m)
+      conn.reply(m.chat, 'Menu ' + type + ' establecido con éxito\n' + info, m)
     } else {
       delete conn.menu[type]
-      conn.reply(m.chat, 'Menu ' + type + ' direset', m)
+      conn.reply(m.chat, 'Menu ' + type + ' Reiniciar', m)
     }
   }
 }
@@ -38,29 +38,29 @@ module.exports = handler
 let info = `
 Universal:
 %% (%)
-%p (Prefix)
-%exp (Current Exp)
-$maxexp (Exp To Level Up)
+%p (Prefijo)
+%exp (Exp actual)
+$maxexp (Exp para subir de nivel)
 %totalexp (Total Exp)
-%xp4levelup (Exp yang dibutuhkan untuk levelup)
-%limit (Limit)
-%name (Nama)
-%weton (Weton Hari ini)
-%week (Hari)
-%date (Tanggal)
-%time (Jam)
-%uptime (Uptime Bot)
-%rtotalreg (Jumlah User yang daftar di database)
-%totalreg (Jumlah User yang ada di database)
+%xp4levelup (Se necesita experiencia para subir de nivel)
+%limit (Límite)
+%name (Nombre)
+%weton (Weton hoy)
+%week (Día)
+%date (Fecha)
+%time (Hira)
+%uptime (Tiempo de actividad de bot)
+%rtotalreg (Número de usuarios registrados en la base de datos)
+%totalreg (Número de usuarios en la base de datos)
 %npmname
 %npmdesc
 %version
 %github
 
 Bagian Menu Header & Footer:
-%category (Kategori)
+%category (Kategoria)
 
 Bagian Menu Body:
 %cmd (Command)
-%islimit (Jika command di limit)
+%islimit (Si el comando es limitado)
 `.trim()
