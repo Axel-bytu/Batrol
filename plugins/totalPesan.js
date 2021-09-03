@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
     }, 1000)
     let sorted = Object.entries(mCount).sort((a, b) => b[1] - a[1])
     let pesan = sorted.map(v => `${v[0].replace(/(\d+)@.+/, '@$1')}: ${v[1]} users`).join('\n')
-    m.reply(`${totalM} users joined\n${pesan}`, false, { contextInfo: { mentionedJid: sorted.map(v => v[0]) } })
+    m.reply(`${totalM} usuarios se unieron\n${pesan}`, false, { contextInfo: { mentionedJid: sorted.map(v => v[0]) } })
 }
 handler.help = ['totalusers']
 handler.tags = ['group']
