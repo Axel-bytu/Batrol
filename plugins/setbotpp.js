@@ -10,9 +10,9 @@ let handler = async(m, { conn, args }) => {
      let mime = (q.msg || q).mimetype || ''
      if (/image/.test(mime)) {
        let img = await conn.downloadM(q)
-       if (!img) throw `Photo not found`
+       if (!img) throw `Foto no encontrada`
       conn.updateProfilePicture(bot,img)
-     conn.reply(m.chat, 'Success in Changing Bots Profile Photo!', m)
+     conn.reply(m.chat, '¡Éxito en el cambio de foto de perfil de Bots!', m)
 }
      }
 handler.help = ['setbotpp']
