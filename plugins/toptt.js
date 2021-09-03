@@ -4,7 +4,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, usedPrefix, command }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
-  if (!/video|audio/.test(mime)) throw `ʀᴇᴘʟʏ ᴀᴜᴅɪᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ ᴛᴏ ᴠᴏɪᴄᴇ ɴᴏᴛᴇ ᴡɪᴛʜ ᴄᴀᴘᴛɪᴏɴ *${usedPrefix + command}*`
+  if (!/video|audio/.test(mime)) throw `responda el audio que desea convertir a nota de voz con subtítulo *${usedPrefix + command}*`
   let media = await q.download()
   let audio = await toPTT(media, 'mp4')
   conn.sendMessage(m.chat, audio, MessageType.audio, {
