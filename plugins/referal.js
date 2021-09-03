@@ -22,11 +22,11 @@ let handler = async (m, { conn, usedPrefix, text }) => {
     users[m.sender].exp += xp_first_time
     users[m.sender].ref_count = 0
     m.reply(`
-Congratulations!
+Felicidades!
 +${xp_first_time} XP
 `.trim())
     m.reply(`
-Someone has used your referral code
+Alguien ha utilizado su código de referencia
 +${xp_link_creator + extra} XP
 `.trim(), link_creator)
   } else {
@@ -35,21 +35,21 @@ Someone has used your referral code
     let command_text = `${usedPrefix}ref ${code}`
     let command_link = `wa.me/${conn.user.jid.split('@')[0]}?text=${encodeURIComponent(command_text)}`
     let share_text = `
-Get ${xp_first_time} XP for those who use the link/referral code below
+Get ${xp_first_time} XP para aquellos que usan el enlace/código de referencia a continuación
 
-Referral Code: *${code}*
+Códigos de referencia: *${code}*
 
 ${command_link}
 `.trim()
     m.reply(`
-Get ${xp_link_creator} XP for every new user who uses your referral code
-${users[m.sender].ref_count} people have used your referral code
+Get ${xp_link_creator} XP por cada nuevo usuario que use su código de referencia
+${users[m.sender].ref_count} personas han usado su código de referencia
 
-Your referral code: ${code}
+Tu código de referencia: ${code}
 
-Share link with friends: ${command_link}
+Compartir enlace con amigos: ${command_link}
 
-or message a friend wa.me/?text=${encodeURIComponent(share_text)}
+o enviar un mensaje a un amigo wa.me/?text=${encodeURIComponent(share_text)}
 
 ${Object.entries(xp_bonus).map(([count, xp]) => `${count} Person = Bonus ${xp} XP`).join('\n')}
 `.trim())
