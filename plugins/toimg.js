@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
   if (!global.support.convert &&
       !global.support.magick &&
       !global.support.gm) return handler.disabled = true // Disable if doesnt support
-  if (!m.quoted) return conn.reply(m.chat, 'ᴛᴀɢ ᴀɴʏ sᴛɪᴄᴋᴇʀ ʙʀᴏ!!', m)
+  if (!m.quoted) return conn.reply(m.chat, 'Etiquetar cualquier pegatina ʙʀᴏ!!', m)
   let q = { message: { [m.quoted.mtype]: m.quoted } }
   if (/sticker/.test(m.quoted.mtype)) {
     let sticker = await conn.downloadM(q)
