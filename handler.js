@@ -381,7 +381,7 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-   rowner: 'Este comando solo puede ser utilizado por _ *Broz!1!1!* _',
+   rowner: 'Este comando solo puede ser utilizado por _ *Axel y Yoselin!* _',
      owner: '¡Este comando solo puede ser usado por _ *Batrol* _!',
      mods: 'Este comando solo puede ser usado por _ *Moderador* _!',
      premium: '¡Este pedido es solo para miembros _ *Premium* _!',
