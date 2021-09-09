@@ -33,15 +33,15 @@ const defaultMenu = {
   
 ╭════〘 *_%me_* 〙═══⊷❍➣
 ┃%emos
-┃%emos *Hola* : \`\`\`%name\`\`\`
-┃%emos *Role* : \`\`\`%role\`\`\`
-┃%emos *Nivel* : \`\`\`%level (%exp / %maxexp))\`\`\`
+┃%emos *Hola👋* : \`\`\`%name\`\`\`
+┃%emos *Role🔋* : \`\`\`%role\`\`\`
+┃%emos *Nivel🎚️* : \`\`\`%level (%exp / %maxexp))\`\`\`
 ┃%emos \`\`\`%totalexp xp en  Total\`\`\`
 ┃%emos *Límite* : %limit Limit
-┃%emos *Fecha* : \`\`\`%week, %date\`\`\`
-┃%emos *Hora* : \`\`\`%time\`\`\`
-┃%emos *Timpo activo* : \`\`\`%uptime (%muptime)\`\`\`
-┃%emos *Registro* : \`\`\`%rtotalreg of %totalreg\`\`\`
+┃%emos *Fecha📆* : \`\`\`%week, %date\`\`\`
+┃%emos *Hora⌚* : \`\`\`%time\`\`\`
+┃%emos *Timpo activo♨️* : \`\`\`%uptime (%muptime)\`\`\`
+┃%emos *Registro🗃️* : \`\`\`%rtotalreg of %totalreg\`\`\`
 ┃%emos
 ┃%emos     ▎▍▌▌▉▏▎▌▉▐▏▌▎
 ┃%emos     ▎▍▌▌▉▏▎▌▉▐▏▌▎
