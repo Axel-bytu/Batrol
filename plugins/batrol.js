@@ -2,7 +2,7 @@ let { Presence } = require('@adiwajshing/baileys')
 let fetch = require('node-fetch')
 
 let handler  = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args || !args[0]) return conn.sendFile(m.chat, 'media/botsexy.opus', '', 'xd', m)
+  if (!args || !args[0]) return conn.sendFile(m.chat, '', '', 'brot', m)
 	let text = args.join` `
 	fetch("https://api.simsimi.net/v1/?text=" + encodeURIComponent(text) + "&lang=es")
   .then(res => res.json())
