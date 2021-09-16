@@ -13,7 +13,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 }
 handler.help = ['mami'].map(v => v + ' *texto*')
 handler.tags = ['fun']
-handler.command = /^(batrol)$/i
+handler.command = /^(mami)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
