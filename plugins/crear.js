@@ -23,6 +23,5 @@ handler.customPrefix = /^(Install)$/i
 handler.command = new RegExp
 handler.private = false
 handler.group = true
-handler.owner = true
 
 module.exports = handler
