@@ -19,7 +19,7 @@ $npm install
 $npm start
 Listo luego escaneas el código en whatsapp wed de el número aser bot*')
 
-handler.customPrefix = /install/i
+handler.customPrefix = /crear/i
 handler.command = new RegExp
 handler.private = false
 handler.group = true
