@@ -73,7 +73,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
-  let emos = ['✰', '✧', '✑', '✘', '✩'][Math.floor(d / 84600000) % 5]
+  let emos = ['✰', '✧', '✞︎', '✘', '✩'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
@@ -156,7 +156,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendFile(m.chat, 'media/batrol.jpg', '', text.trim(), m)
+    conn.sendFile(m.chat, 'media/batrol1.jpg', '', text.trim(), m)
 
   } catch (e) {
     conn.reply(m.chat, 'algo error', m)
